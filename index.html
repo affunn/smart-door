@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Door</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- MQTT.js -->
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+
+  <!-- JS External -->
+  <script src="app.js" defer></script>
+</head>
+
+<body class="bg-slate-900 h-screen flex items-center justify-center">
+
+  <div class="bg-slate-800 p-8 rounded-2xl w-80 text-center shadow-xl">
+    <h1 class="text-white text-2xl font-bold mb-4">🚪 Smart Door</h1>
+
+    <!-- Status Indicator -->
+    <div
+      id="indicator"
+      class="mb-6 py-2 rounded-xl text-white font-semibold bg-gray-500"
+    >
+      STATUS: -
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex justify-between">
+      <button
+        id="btnOpen"
+        class="bg-green-500 hover:bg-green-600 px-5 py-2 rounded-xl text-white transition"
+      >
+        OPEN
+      </button>
+
+      <button
+        id="btnClose"
+        class="bg-red-500 hover:bg-red-600 px-5 py-2 rounded-xl text-white transition"
+      >
+        CL
